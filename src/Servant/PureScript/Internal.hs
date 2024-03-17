@@ -94,9 +94,8 @@ defaultSettings =
       _standardImports =
         importsFromList
           [ ImportLine "Affjax.RequestHeader" (Set.fromList ["RequestHeader(..)"]),
-            ImportLine "Data.Argonaut" (Set.fromList ["Json", "JsonDecodeError"]),
-            ImportLine "Data.Argonaut.Decode.Aeson" $ Set.fromList ["(</$\\>)", "(</*\\>)", "(</\\>)"],
-            ImportLine "Data.Argonaut.Encode.Aeson" $ Set.fromList ["(>$<)", "(>/\\<)"],
+            ImportLine "Data.Argonaut" (Set.fromList ["class DecodeJson", "class EncodeJson", "Json", "JsonDecodeError", "decodeJson", "encodeJson"]),
+            ImportLine "Data.Generic.Rep" (Set.fromList ["class Generic"]), 
             ImportLine "Data.Array" (Set.fromList ["catMaybes"]),
             ImportLine "Data.Either" (Set.fromList ["Either(..)"]),
             ImportLine "Data.Foldable" (Set.fromList ["fold"]),

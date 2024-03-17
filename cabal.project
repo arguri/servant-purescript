@@ -1,10 +1,9 @@
 -- Bump this if you need newer packages
-index-state: 2021-10-06T00:00:00Z
+index-state: 2024-03-16T00:00:00Z
 
 source-repository-package
   type: git
-  location: https://github.com/input-output-hk/purescript-bridge.git
-  tag: 7e554e516e17299ec2100c0f25ae7400deaed592
-  --sha256: 12gh11nrkd9kk94l24bg736n1npc4kq8mvn9bsjc12fg7dw29nxj
+  location: https://github.com/arguri/purescript-bridge.git
+  version: master
 
 packages: .

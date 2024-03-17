@@ -56,8 +56,7 @@ genModuleHeader moduleName imports =
         </> "module" <+> strictText moduleName <+> "where" <> line
         </> "import Prelude" <> line
         </> docIntercalate line importLines
-        </> "import Data.Argonaut.Decode.Aeson as D"
-        </> "import Data.Argonaut.Encode.Aeson as E"
+
   where
     exclude m = (/= m) . importModule
 
@@ -139,10 +138,8 @@ genFnBody method headers body args queryString returnType = docIntercalate line 
   , strictText case body of
       Nothing -> "content = Nothing"
       Just _ -> "content = Just reqBody"
-  , strictText "encode = E.encode encoder"
-  , strictText "decode = D.decode decoder"
-  , strictText "encoder =" <+> encoder
-  , strictText "decoder =" <+> decoder
+  , strictText "encode = encodeJson"
+  , strictText "decode = decodeJson"
   , strictText "relativePart = RelativePartNoAuth $ Just" </> niceList segments
   , strictText "query =" <+> query
   ]

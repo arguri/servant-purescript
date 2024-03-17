@@ -6,6 +6,7 @@
 {-# LANGUAGE TypeFamilies #-}
 {-# LANGUAGE TypeOperators #-}
 {-# LANGUAGE UndecidableInstances #-}
+{-# LANGUAGE FlexibleContexts #-}
 
 -- | A header which gets sent by the browser and is thus of no concern for the client consumer of the API.
 module Servant.API.BrowserHeader where
